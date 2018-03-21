@@ -431,6 +431,7 @@ class NodeLinesItem(object):
         lines (list[tuple]): Line ID and direction.
         latitude (double): Latitude of the node in decimal degrees.
         longitude (double): Longitude of the node in decimal degrees.
+        wifi (int): Whether the node has/has not wifi.
 
         _json (dict): Original API response.
     """
@@ -440,6 +441,7 @@ class NodeLinesItem(object):
         self.name = kwargs.get('name')
         self.latitude = kwargs.get('latitude')
         self.longitude = kwargs.get('longitude')
+        self.wifi =kwargs.get('Wifi')
 
         lines = kwargs.get('lines')
         self.lines = []
